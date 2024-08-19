@@ -1,0 +1,19 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="my-persistence-unit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.exemplo.Pedido</class>
+        <class>com.exemplo.Produto</class>
+        <class>com.exemplo.Usuario</class>
+        <class>com.exemplo.Cliente</class>
+        <class>com.exemplo.Endereco</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jv_class"/>
+            <property name="javax.persistence.jdbc.user" value="myuser"/>
+            <property name="javax.persistence.jdbc.password" value="mypassword"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
